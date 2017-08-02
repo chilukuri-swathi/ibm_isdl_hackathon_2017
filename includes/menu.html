@@ -1,0 +1,146 @@
+<span id="menulink">
+
+<style>
+#ulmenulink {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F4F4F4;
+		width: 36%;
+		margin-top: -63px;
+		float: right;
+		border: 1px solid black;
+}
+
+#limenulink {
+    float: left;
+}
+
+#limenulink a {
+    display: block;
+    color: #325c80;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+}
+
+
+</style>
+<ul id="ulmenulink">
+	<li id="limenulink">
+		<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Team Info</a>
+	</li>
+	<li style="display:inline-block;position:relative;margin-top:0px;" id="limenulink">
+		<a href="javascript:void(0)" onclick="document.getElementById('lightone').style.display='block';document.getElementById('fadeone').style.display='block'">Idea</a>
+	</li>
+	<li style="display:inline-block;position:relative;margin-top:0px;" id="limenulink">
+		<a href="javascript:void(0)" onclick="document.getElementById('lighttwo').style.display='block';document.getElementById('fadetwo').style.display='block'">Technical Information</a>
+	</li>
+</ul>
+ <div id="light" class="white_content">
+	<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" ><img src="images/close.png" alt="close" style="
+    float: right;height: 25px;width: 25px;">
+	</a>
+	<span><b><u>Mentors:</u></b>
+		<ul>
+			<li><a href="https://w3.ibm.com/bluepages/profile.html?uid=081146744" target="_blank">Phani K Ayyagari2/India/IBM</a> (AIX USB Device Driver Development)</li>
+			<li><a href="https://w3.ibm.com/bluepages/profile.html?uid=04167A744" target="_blank">Madan K Chukka1/India/IBM</a> (AIX Network Device Drivers)</li>
+			<li><a href="https://w3.ibm.com/bluepages/profile.html?uid=016154744" target="_blank">Purnachandra R Jasti/India/IBM</a> (AIX Device Driver Developer)</li>
+		</ul>
+	</span>
+	<span><br><b><u>Developers:</u></b>
+		<ul>
+			<li><a href="https://w3.ibm.com/bluepages/profile.html?uid=06458M744" target="_blank">Swathi Chilukuri/India/IBM</a> (Application Developer)</li>
+			<li><a href="https://w3.ibm.com/bluepages/profile.html?uid=623270744" target="_blank">Ravikiran Moningi/India/IBM</a> (Software Engineer - RSCT IBM Systems)</li>
+			<li><a target="_blank" href="https://w3.ibm.com/bluepages/profile.html?uid=06229G744">Subhra Das7/India/IBM</a> (IBM Systems)</li>
+		</ul>
+	</span>
+ </div>
+ <div id="fade" class="black_overlay"></div>
+ </span>
+<span id="menulinkone"> 
+<div id="lightone" class="white_contentone">
+	<a href="javascript:void(0)" onclick="document.getElementById('lightone').style.display='none';document.getElementById('fadeone').style.display='none'" ><img src="images/close.png" alt="close" style="
+    float: right;height: 25px;width: 25px;">
+	</a>
+	<dl style="text-align:-moz-center"><b><u>Idea Summary</u></b></dl>
+	<dl><b>Area:</b> Watson</dl>
+
+<dl><b>Description:</b> Code evolves over multiple releases/projects and we have lot of documents and code related to the projects.  While designing for latest projects, we often consult experienced people and legacy documents to understand why  something is introduced in someway. Similarly, if a customer raised PMR, it is common practice to consult people or refer to documents. If it is common or popular question, we can easily find it by a simple Google search or searching in PMR database. But if your goal is to find answers for unpopular questions, simple search is not effective. A study shows unpopular questions about a product will consume 80% of the time to retrieve an answer.</dl>
+<dl>
+	<dt><b>Lets take example of popular questions which we can easily obtain answers using a google search or searching in PMR database</b></dt>
+	<dd><ul>
+		<li>What is the max transfer size for a CAPI disk?</li>
+		<li>Does Rains adapter support interrupts?</li>
+		<li>What is resetToggle bit?</li>					
+	</ul></dd>
+</dl>
+<dl>
+	<dt><b>Reflect on the following unpopular questions that arise for a development or a L3 team member:</b></dt>
+	<dd><ul>
+		<li>Why was max tranfer size of CAPI disk increased from 128KB to 4GB?</li>
+		<li>Why we use timers to poll for transmit completions in Rains adapter?</li>
+		<li>What is the reason behind combining disk and adapter drivers for accessing CAPI disks?</li>	
+		<li>Why resetToggle bit is checked for USB 2.0 devices but not for USB 3.0 devices?</li>	
+		<li>What was the maximum transfer size of scsidisk when MPIO/PCM was not available?</li>			
+	</ul></dd>
+</dl>
+<dl>The above unpopular questions will take lot of time to get answers. To solve such problems, we propose a system that uses Watson's service and helps delevopment/L3 teams to find answers for unpopular questions (the questions that cannot be solved using simple search) quickly.</dl>
+<dl>
+	<dt><b>Our proposed system contains three parts:</b></dt>
+	<dd><ul>
+		<li>user Interface</li>
+		<li>Question and Answer Subsystem running on Server</li>						
+	</ul></dd>
+</dl>
+<dl>
+        <dt><b>The System works in the following way:</b></dt>
+        <dd><ul>
+						<li>All FRS, Design Documents will be fed to Watson from Database. All the documents are converted in to JSON using "Document Conversion" Watson service.</li>
+						<li>The data is trained with sample questions and answers. This happens in Q&A subsystem.</li>
+						<li>User queries through UI and retrieves answers from the Q&A subsytem.
+Users summarize their question and submit it to the Retrieve and Rank Application service running in Q&A subsystem.  The system searches the database, and generates, scores and ranks the answers.  The system presents the most relevant answers to the user.</li>
+					</ul>
+				</dd>
+		</dl>
+<dl>
+        <dt><b>Future Enhancements</b></dt>
+        <dd>In addition to FRS/Design documents, increase the data by feeding from additional following data sources like
+				<ul>
+						<li>Slack channel data which is created when a new LI is being worked on</li>
+						<li>All mail data related to some lineitem.</li>
+						<li>Source Code and doxygen call graphs</li>
+					</ul>
+				</dd>
+		</dl>
+</div>
+<div id="fadeone" class="black_overlayone"></div>
+</span>
+<span id="menulinktwo">
+ 
+<div id="lighttwo" class="white_contenttwo">
+	<a href="javascript:void(0)" onclick="document.getElementById('lighttwo').style.display='none';document.getElementById('fadetwo').style.display='none'" ><img src="images/close.png" alt="close" style="
+    float: right;height: 25px;width: 25px;">
+	</a>
+	<dl style="text-align:-moz-center"><b><u>Technical Information</u></b></dl>
+	<dl>The front end is implemented using php and the application is deployed in Bluemix.
+The Bluemix application interacts with watson services running on the cloud.
+We have used Document Conversion and Retrieve and Rank Watson services.
+Since we need to upload documents on cloud, we did not upload FRS and design documents.
+For POC purposes, we have used few documents on USB and RSCT to train our watson.</dl>
+<dl>
+        <dt><b>References:</b></dt>
+        <dd>In addition to FRS/Design documents, increase the data by feeding from additional following data sources.<br>
+				<ul>
+						<li>https://www.ibm.com/watson/services/retrieve-and-rank/</li>
+						<li>https://www.ibm.com/watson/services/document-conversion/</li>
+						<li>https://www.ibm.com/watson/developercloud/doc/retrieve-rank/tutorial.html</li>
+					</ul>
+				</dd>
+		</dl>
+	
+ </div>
+<div id="fadetwo" class="black_overlaytwo"></div>
+</span>
+		

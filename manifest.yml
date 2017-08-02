@@ -1,0 +1,2 @@
+env:
+    PHP_INI_SCAN_DIR: .bp-config/php/conf.d

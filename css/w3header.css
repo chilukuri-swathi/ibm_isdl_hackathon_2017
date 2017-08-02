@@ -1,0 +1,86 @@
+#masthead	{
+	position:absolute;
+	top:0;
+	left:0;
+	height:70px;
+	width:100%;
+	color:#fff;
+	background:#4477bb;
+	z-index:1;
+	padding:0;
+	margin:0;
+}
+
+#site-title-plus	{
+	position:absolute;
+	top:26px;
+	left:131px;
+	color:#fff;
+	font-size:21px;
+	font-weight:bold;
+	font-family:arial,verdana,helvetica,sans-serif;
+}
+
+#site-title-only	{
+	position:absolute;
+	top:35px;
+	left:131px;
+	color:#fff;
+	font-size:21px;
+	font-weight:bold;
+	font-family:arial,verdana,helvetica,sans-serif;
+}
+
+#site-title-user	{font-weight:normal;}
+
+#site-sub-title	{
+	color:#fff;
+	font-size:11px;
+	font-weight:bold;
+	font-family:verdana,arial,helvetica,sans-serif;
+}
+
+#w3-sitemark	{position:absolute; top:0; left:0;}
+#w3-sitemark img	{border:0;}
+#personalization-links	{position:absolute; top:6px; left:132px; color:#bdf; font-size:.9em;}
+#personalization-links a	{color:#bdf;}
+#personalization-links a:hover	{color:#fff;}
+
+#personalization-links #user	{font-weight:bold; color:#fff; padding-right:.5em;}
+#personalization-links span#edit-settings	{color:#fff;}
+
+#persistent-nav	{position:absolute; top:52px; right:13px; color:#fff; font-size:.9em; font-weight:bold;}
+#persistent-nav a	{color:#fff; padding:0 .25em .1em .5em; text-decoration:none;}
+#persistent-nav a:hover	{color:#bdf; text-decoration:underline;}
+
+#persistent-nav a#w3home		{border-right:1px solid #147;}
+#persistent-nav a#bluepages	{border-left:1px solid #8ae; border-right:1px solid #147;}
+#persistent-nav a#helpnow	{border-left:1px solid #8ae; border-right:1px solid #147;}
+#persistent-nav a#feedback	{border-left:1px solid #8ae; margin-left:1px;}
+* html #persistent-nav a#feedback	{
+	\margin-left:0px;
+	mar\gin-left:0px;
+	}
+
+#persistent-nav a#feedback-txc	{border-left:1px solid #8ae; border-right:1px solid #147;}
+#persistent-nav a#txc			{border-left:1px solid #8ae; margin-left:1px;}
+* html #persistent-nav a#txc	{
+	\margin-left:0px;
+	mar\gin-left:0px;
+	}
+
+.odw #persistent-nav a#w3home	{display:none;}
+.odw #persistent-nav a#bluepages	{border-left:0;}
+
+#header-search {position:absolute; top:4px; left:55%;}
+table.header-search td.label {
+	font-weight:bold; color:#fff; font-size:11px;
+	padding-top:.5em; padding-right:.3em;
+	white-space:nowrap; text-align:right;
+	}
+table.header-search td.field {height:1em; padding-left:.3em;}
+#header-search-field {width:100px; height:1em; font-size:1em; font-weight:normal;}
+table.header-search td.submit {padding-left:.4em;}
+table.header-search td.limiter {padding:0; font-size:10px; color:#fff;}
+
+#ibm-logo	{position:absolute; right:13px; top:13px;}
